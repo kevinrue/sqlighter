@@ -1,0 +1,16 @@
+Package: sqliter
+Title: Wrappers and extensions to the RSQLite package
+Version: 0.0.1
+Authors@R: person(
+    "Kevin", "Rue-Albrecht",
+    email = "kevin.rue-albrecht@kennedy.ox.ac.uk", role = c("aut", "cre"))
+Description: Provide convenient wrappers that safely open and close the
+    connection to the SQLite database before and after sending queries and
+    receiving results.
+Depends: R (>= 3.5)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0
+Imports: RSQLite
+Suggests: testthat
