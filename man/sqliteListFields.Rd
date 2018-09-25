@@ -4,12 +4,12 @@
 \alias{sqliteListFields}
 \title{List fields available in database table}
 \usage{
-sqliteListFields(file, table, ...)
+sqliteListFields(table, file, ...)
 }
 \arguments{
-\item{file}{Path to the SQLite database file}
-
 \item{table}{Name of the table to inspect}
+
+\item{file}{Path to the SQLite database file}
 
 \item{...}{Other parameters passed on to methods.}
 }
@@ -32,5 +32,5 @@ dbDisconnect(conn)
 
 # Example ----
 
-sqliteListFields(database_file, "mtcars")
+sqliteListFields("mtcars", database_file)
 }
