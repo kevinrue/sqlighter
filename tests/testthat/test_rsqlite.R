@@ -60,12 +60,12 @@ test_that("sqliteTableExists works", {
 test_that("sqliteTableExists works", {
 
     expect_identical(
-        sqliteListFields(database_file, "USArrests"),
+        sqliteListFields("USArrests", database_file),
         colnames(USArrests)
     )
 
     expect_identical(
-        sqliteListFields(database_file, "mtcars"),
+        sqliteListFields("mtcars", database_file),
         colnames(mtcars)
     )
 

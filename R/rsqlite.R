@@ -66,8 +66,8 @@ sqliteTableExists <- function(table, file)
 
 #' List fields available in database table
 #'
-#' @param file Path to the SQLite database file
 #' @param table Name of the table to inspect
+#' @param file Path to the SQLite database file
 #' @param ... Other parameters passed on to methods.
 #'
 #' @return A character vector of field names.
@@ -88,8 +88,8 @@ sqliteTableExists <- function(table, file)
 #'
 #' # Example ----
 #'
-#' sqliteListFields(database_file, "mtcars")
-sqliteListFields <- function(file, table, ...){
+#' sqliteListFields("mtcars", database_file)
+sqliteListFields <- function(table, file, ...){
     stopifnot(file.exists(file))
     stopifnot(sqliteTableExists(table, file))
     conn <- dbConnect(SQLite(), dbname = file)
@@ -126,6 +126,7 @@ sqliteListFields <- function(file, table, ...){
 #' sqliteReadTable("mtcars", database_file)
 sqliteReadTable <- function(table, file){
     stopifnot(file.exists(file))
+    stopifnot(sqliteTableExists(table, file))
     conn <- dbConnect(RSQLite::SQLite(), dbname = file)
     query <- sprintf("SELECT * FROM %s", table)
     table_data <- dbGetQuery(conn, query)
