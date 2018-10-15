@@ -1,4 +1,4 @@
 library(testthat)
-library(sqliter)
+library(sqlighter)
 
-test_check("sqliter")
+test_check("sqlighter")
