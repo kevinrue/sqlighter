@@ -1,4 +1,4 @@
-Package: sqliter
+Package: sqlighter
 Title: Wrappers and extensions to the RSQLite package
 Version: 0.0.1
 Authors@R: person(
