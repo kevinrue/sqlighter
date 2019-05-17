@@ -15,4 +15,4 @@ LazyData: true
 RoxygenNote: 6.1.1
 Imports: RSQLite
 Suggests: testthat
-url: https://kevinrue.github.io/sqlighter/index.html
+url: https://github.com/kevinrue/sqlighter, https://github.com/kevinrue/sqlighter/issues
